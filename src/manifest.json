@@ -1,0 +1,19 @@
+{
+	"name": "ext",
+	"version": "0.0.0",
+	"manifest_version": 3,
+	"icons": {"128": "icons/icon128.png"},
+	"background": {"service_worker": "./background.js", "type": "module"},
+	"permissions": ["alarms", "downloads", "tabs", "scripting", "storage", "unlimitedStorage"],
+	"host_permissions": ["https://*/*", "http://*/*"],
+	"action": {
+		"default_icon": {"128": "icons/icon128.png"},
+		"default_title": "Explode"
+	},
+	"web_accessible_resources": [
+		{
+			"matches": ["https://*/*", "http://*/*", "https://www.google.com/*"],
+			"resources": ["./basic.js", "basic.js"]
+		}
+	]
+}
